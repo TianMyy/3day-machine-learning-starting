@@ -5,7 +5,7 @@ from sklearn.neighbors import KNeighborsClassifier
 
 def knn_iris():
     """
-    use KNN algorithm to clarify the iris category
+    use KNN algorithm to classify the iris category
     :return:
     """
     #1)get data
@@ -35,5 +35,5 @@ def knn_iris():
     return None
 
 if __name__ == "__main__":
-    # code 1: use KNN algorithm to clarify the iris category
+    # code 1: use KNN algorithm to classify the iris category
     knn_iris()

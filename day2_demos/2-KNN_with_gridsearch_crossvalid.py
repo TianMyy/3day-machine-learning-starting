@@ -6,7 +6,7 @@ from sklearn.model_selection import GridSearchCV
 
 def knn_iris_gscv():
     """
-    use KNN algorithm to clarify the iris category, add grid search and cross validation
+    use KNN algorithm to classify the iris category, add grid search and cross validation
     :return:
     """
     #1)get data
@@ -50,5 +50,5 @@ def knn_iris_gscv():
     return None
 
 if __name__ == "__main__":
-    # code 2: use KNN algorithm to clarify the iris category, add grid search and cross validation
+    # code 2: use KNN algorithm to classify the iris category, add grid search and cross validation
     knn_iris_gscv()
