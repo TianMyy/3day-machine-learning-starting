@@ -1,6 +1,7 @@
 from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_iris
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import export_graphviz
 
 def decision_iris():
     '''
@@ -26,6 +27,9 @@ def decision_iris():
     # method 2:calculate the accuracy rate
     score = estimator.score(x_test, y_test)
     print("accuracy_score:\n", score)
+
+    # Decision Tree visualization
+    export_graphviz(estimator, out_file='iris_tree.dot', feature_names=iris.feature_names)
 
     return None
 
