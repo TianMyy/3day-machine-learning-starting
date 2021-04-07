@@ -23,6 +23,5 @@ from sklearn.decomposition import PCA
 transfer = PCA(n_components=0.95)
     # use fit_transform
 data_new = transfer.fit_transform(data)
-
-data_new.shape
+print(data_new.shape)
 
