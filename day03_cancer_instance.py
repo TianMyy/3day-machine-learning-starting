@@ -3,6 +3,8 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+from sklearn.metrics import roc_auc_score
 
 # use logistic regression to predict the cancer
 
@@ -46,3 +48,11 @@ print("compare true and predicted value:\n", y_test == y_predict)
 score = estimator.score(x_test, y_test)
 print("accuracy_score:\n", score)
 
+# view precision, recall and F1-score
+report = classification_report(y_test, y_predict, labels=[2, 4], target_names=['良性', '恶性'])
+print(report)
+
+# roc and auc, the model is better if the value is closer to 1
+y_true = np.where(y_test > 3, 1, 0)
+value = roc_auc_score(y_true, y_predict)
+print(value)
