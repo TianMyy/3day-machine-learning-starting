@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import Ridge
 from sklearn.metrics import mean_squared_error
+import joblib
 
 def linear_ridge():
     '''
@@ -24,6 +25,11 @@ def linear_ridge():
     # 4)Logistic Regression algorithm estimator
     estimator = Ridge(max_iter=10000, alpha=0.5)
     estimator.fit(x_train, y_train)
+    # # save model
+    #joblib.dump(estimator, 'my_ridge.pkl')
+    # # load model
+    # estimator = joblib.load('my_ridge.pkl')
+
 
     # 5)get model
     print('coef_:', estimator.coef_)
